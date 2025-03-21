@@ -17,6 +17,17 @@ A Tampermonkey script that enhances video playback on any website with convenien
 1. Install [Tampermonkey](https://www.tampermonkey.net/) for your browser.
 2. Click [here](https://github.com/your-repo/universal-video-booster/raw/main/universal-video-booster.user.js) to install the script.
 
+## Whitelist Setup
+
+To make the script run only on specific websites, modify the `@match` lines in the script's metadata. For example:
+
+```javascript
+// @match        https://moodle.xxx.edu.tw/*
+// @match        https://example.com/*
+```
+
+This ensures the script only activates on those websites.
+
 ## Usage
 
 1. Visit any website with an HTML5 video.

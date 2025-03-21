@@ -7,6 +7,7 @@
 // @match        *://*/*
 // @icon         https://github.com/micr0dust/Universal-Video-Booster-Shortcuts-for-Any-Website/raw/main/icon.png
 // @grant        none
+// @license      MIT
 // ==/UserScript==
 
 (function () {

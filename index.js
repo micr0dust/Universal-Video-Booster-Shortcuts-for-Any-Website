@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         Universal Video Booster & Shortcuts
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/micr0dust
 // @version      2025-03-20
 // @description  🇬🇧 Enhance video playback with shortcuts and volume boost (up to 10000%)! Perfect for online lectures and streaming. 🇹🇼 提供影片快轉/倒轉快捷鍵、聲音放大功能(最大支持10000%)！適合用來看學校教學影片。
 // @author       Microdust
 // @match        *://*/*
-// @icon         none
+// @icon         https://github.com/micr0dust/Universal-Video-Booster-Shortcuts-for-Any-Website/raw/main/icon.png
 // @grant        none
 // ==/UserScript==
 

@@ -42,10 +42,6 @@ This ensures the script only activates on those websites.
 - Works on most websites with `<video>` elements.
 - Tested with Moodle and other educational platforms.
 
-## License
-
-[MIT License](LICENSE)
-
 ---
 ✉ Created by [Microdust](https://github.com/micr0dust)
 

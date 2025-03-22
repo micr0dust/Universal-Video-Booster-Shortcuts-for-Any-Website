@@ -42,10 +42,6 @@ This ensures the script only activates on those websites.
 - Works on most websites with `<video>` elements.
 - Tested with Moodle and other educational platforms.
 
-## Changelog
-
-- **v2025-03-20**: Initial release with multi-language support and universal video boosting.
-
 ## License
 
 [MIT License](LICENSE)

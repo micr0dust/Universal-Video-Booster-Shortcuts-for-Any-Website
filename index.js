@@ -2,7 +2,7 @@
 // @name                Universal Video Booster & Shortcuts
 // @name:zh-TW          影片聲音放大/降噪/左右鍵快轉
 // @namespace           https://github.com/micr0dust
-// @version             2025-03-21
+// @version             2025-03-22
 // @description         Provides sound amplification (up to 10,000%), noise reduction, and fast forward using left/right arrow keys. Ideal for watching school lecture videos.
 // @description:zh-tw   提供聲音放大(最大支持10000%)/降噪/左右鍵快轉，適合用來看學校教學影片。
 // @author              Microdust

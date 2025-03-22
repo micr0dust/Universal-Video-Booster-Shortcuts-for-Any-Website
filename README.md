@@ -10,6 +10,9 @@ A Tampermonkey script that enhances video playback on any website with convenien
 - ⏩ **Fast Forward:** Jump ahead 10 seconds with the right arrow.
 - ⬆️ **Increase Volume:** Use the up arrow to boost volume.
 - ⬇️ **Decrease Volume:** Use the down arrow to lower volume.
+- 🎛️ **Noise Filter:** Reduce background noise for clearer audio.
+  - 🔄 Toggle on/off with **N** key.
+  - 🎚️ Adjust noise filter frequency with **Ctrl + Up/Down** (500Hz - 6000Hz).
 - 🔄 **Language Support:** Auto-detects browser language (English/Chinese).
 
 ## Installation

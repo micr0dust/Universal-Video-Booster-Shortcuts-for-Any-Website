@@ -23,7 +23,10 @@
             rewind: "⏪ Rewind 10s",
             forward: "⏩ Forward 10s",
             volumeUp: "🔊 Volume: ",
-            volumeDown: "🔉 Volume: "
+            volumeDown: "🔉 Volume: ",
+            filterFreq: "🎚️ Noise Filter: ",
+            filterOn: "🎛️ Noise Filter ON",
+            filterOff: "🔈 Noise Filter OFF",
         },
         zh: {
             play: "▶️",
@@ -31,20 +34,35 @@
             rewind: "⏪ 倒轉 10 秒",
             forward: "⏩ 快轉 10 秒",
             volumeUp: "🔊 音量：",
-            volumeDown: "🔉 音量："
+            volumeDown: "🔉 音量：",
+            filterFreq: "🎚️ 降噪頻率：",
+            filterOn: "🎛️ 已開啟降噪",
+            filterOff: "🔈 已關閉降噪",
         }
     };
 
     let audioCtx;
     let gainNode;
-
+    let filterNode;
+    let noiseThreshold = 3000;
+    let isFilterEnabled = false;
+    
     function setupVolumeBooster(video) {
         if (!audioCtx) {
             audioCtx = new (window.AudioContext || window.webkitAudioContext)();
             const source = audioCtx.createMediaElementSource(video);
             gainNode = audioCtx.createGain();
+            filterNode = audioCtx.createBiquadFilter();
+            filterNode.type = "lowpass";
+            filterNode.frequency.value = noiseThreshold; // 預設 5000Hz
+    
             source.connect(gainNode);
-            gainNode.connect(audioCtx.destination);
+            if (isFilterEnabled) {
+                gainNode.connect(filterNode);
+                filterNode.connect(audioCtx.destination);
+            } else {
+                gainNode.connect(audioCtx.destination);
+            }
         }
     }
 
@@ -105,12 +123,38 @@
                 actionText = messages[lang].forward;
                 break;
             case 'ArrowUp':
-                gainNode.gain.value = Math.min(100, gainNode.gain.value + 0.1);
-                actionText = `${messages[lang].volumeUp}${(gainNode.gain.value * 100).toFixed(0)}%`;
+                if (event.ctrlKey) {
+                    noiseThreshold = Math.min(6000, noiseThreshold + 500);
+                    filterNode.frequency.value = noiseThreshold;
+                    actionText = `${messages[lang].filterFreq}${noiseThreshold}Hz`;
+                } else {
+                    gainNode.gain.value = Math.min(100, gainNode.gain.value + 0.1);
+                    actionText = `${messages[lang].volumeUp}${(gainNode.gain.value * 100).toFixed(0)}%`;
+                }
                 break;
             case 'ArrowDown':
-                gainNode.gain.value = Math.max(0, gainNode.gain.value - 0.1);
-                actionText = `${messages[lang].volumeDown}${(gainNode.gain.value * 100).toFixed(0)}%`;
+                if (event.ctrlKey) {
+                    noiseThreshold = Math.max(500, noiseThreshold - 500);
+                    filterNode.frequency.value = noiseThreshold;
+                    actionText = `${messages[lang].filterFreq}${noiseThreshold}Hz`;
+                } else {
+                    gainNode.gain.value = Math.max(0, gainNode.gain.value - 0.1);
+                    actionText = `${messages[lang].volumeDown}${(gainNode.gain.value * 100).toFixed(0)}%`;
+                }
+                break;
+            case 'KeyN':
+                isFilterEnabled = !isFilterEnabled;
+                if (isFilterEnabled) {
+                    gainNode.disconnect(audioCtx.destination);
+                    gainNode.connect(filterNode);
+                    filterNode.connect(audioCtx.destination);
+                    actionText = messages[lang].filterOn;
+                } else {
+                    gainNode.disconnect(filterNode);
+                    filterNode.disconnect(audioCtx.destination);
+                    gainNode.connect(audioCtx.destination);
+                    actionText = messages[lang].filterOff;
+                }
                 break;
         }
         showVideoAction(actionText, 500);

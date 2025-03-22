@@ -18,7 +18,7 @@ A Tampermonkey script that provides sound amplification (up to 10,000%), noise r
 ## Installation
 
 1. Install [Tampermonkey](https://www.tampermonkey.net/) for your browser.
-2. Click [here](https://github.com/your-repo/universal-video-booster/raw/main/universal-video-booster.user.js) to install the script.
+2. Click [here](https://greasyfork.org/zh-TW/scripts/530402-universal-video-booster-shortcuts) to install the script.
 
 ## Whitelist Setup
 

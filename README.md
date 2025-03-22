@@ -1,6 +1,6 @@
 # Universal Video Booster & Shortcuts
 
-A Tampermonkey script that enhances video playback on any website with convenient keyboard shortcuts and a powerful volume booster (up to 10000%). Skip forward/backward, and amplify quiet videos — perfect for online lectures!
+A Tampermonkey script that provides sound amplification (up to 10,000%), noise reduction, and fast forward using left/right arrow keys. Ideal for watching school lecture videos.
 
 ## Features
 

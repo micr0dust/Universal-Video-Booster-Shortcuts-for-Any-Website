@@ -12,7 +12,7 @@ A Tampermonkey script that enhances video playback on any website with convenien
 - ⬇️ **Decrease Volume:** Use the down arrow to lower volume.
 - 🎛️ **Noise Filter:** Reduce background noise for clearer audio.
   - 🔄 Toggle on/off with **N** key.
-  - 🎚️ Adjust noise filter frequency with **Ctrl + Up/Down** (500Hz - 6000Hz).
+  - 🎚️ Adjust noise filter frequency with **Ctrl + Up⬆️/Down⬇️** (500Hz - 6000Hz).
 - 🔄 **Language Support:** Auto-detects browser language (English/Chinese).
 
 ## Installation

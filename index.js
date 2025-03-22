@@ -2,7 +2,7 @@
 // @name                Universal Video Booster & Shortcuts
 // @name:zh-TW          通用影片聲音放大 & 快捷鍵快轉
 // @namespace           https://github.com/micr0dust
-// @version             2025-03-20
+// @version             2025-03-21
 // @description         Enhance video playback with shortcuts and volume boost (up to 10000%)! Perfect for online lectures and streaming.
 // @description:zh-tw   提供影片快轉/倒轉快捷鍵、聲音放大功能(最大支持10000%)！適合用來看學校教學影片。
 // @author              Microdust

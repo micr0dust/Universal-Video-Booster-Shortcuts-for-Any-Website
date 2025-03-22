@@ -4,12 +4,12 @@ A Tampermonkey script that provides sound amplification (up to 10,000%), noise r
 
 ## Features
 
-- 🔊 **Volume Booster:** Amplify video sound up to 10000%.
 - ⏸️ **Play/Pause:** Toggle playback with the spacebar.
 - ⏪ **Rewind:** Jump back 10 seconds with the left arrow.
 - ⏩ **Fast Forward:** Jump ahead 10 seconds with the right arrow.
-- ⬆️ **Increase Volume:** Use the up arrow to boost volume.
-- ⬇️ **Decrease Volume:** Use the down arrow to lower volume.
+- 🔊 **Volume Booster:** Can amplify video sound up to 10000%.
+  - ⬆️ **Increase Volume:** Use the up arrow to boost volume.
+  - ⬇️ **Decrease Volume:** Use the down arrow to lower volume.
 - 🎛️ **Noise Filter:** Reduce background noise for clearer audio.
   - 🔄 Toggle on/off with **N** key.
   - 🎚️ Adjust noise filter frequency with **Ctrl + Up⬆️/Down⬇️** (500Hz - 6000Hz).

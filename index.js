@@ -124,7 +124,7 @@
                 break;
             case 'ArrowUp':
                 if (event.ctrlKey) {
-                    noiseThreshold = Math.min(6000, noiseThreshold + 500);
+                    noiseThreshold = Math.min(6000, noiseThreshold + 100);
                     filterNode.frequency.value = noiseThreshold;
                     actionText = `${messages[lang].filterFreq}${noiseThreshold}Hz`;
                 } else {
@@ -134,7 +134,7 @@
                 break;
             case 'ArrowDown':
                 if (event.ctrlKey) {
-                    noiseThreshold = Math.max(500, noiseThreshold - 500);
+                    noiseThreshold = Math.max(500, noiseThreshold - 100);
                     filterNode.frequency.value = noiseThreshold;
                     actionText = `${messages[lang].filterFreq}${noiseThreshold}Hz`;
                 } else {

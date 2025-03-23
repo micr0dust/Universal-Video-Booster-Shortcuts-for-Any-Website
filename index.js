@@ -128,7 +128,7 @@
                     filterNode.frequency.value = noiseThreshold;
                     actionText = `${messages[lang].filterFreq}${noiseThreshold}Hz`;
                 } else {
-                    gainNode.gain.value = Math.min(100, gainNode.gain.value + 0.1);
+                    gainNode.gain.value = Math.min(100, gainNode.gain.value + Math.max(10**parseInt(Math.log10(gainNode.gain.value+1)-2), 0.1));
                     actionText = `${messages[lang].volumeUp}${(gainNode.gain.value * 100).toFixed(0)}%`;
                 }
                 break;
@@ -138,7 +138,7 @@
                     filterNode.frequency.value = noiseThreshold;
                     actionText = `${messages[lang].filterFreq}${noiseThreshold}Hz`;
                 } else {
-                    gainNode.gain.value = Math.max(0, gainNode.gain.value - 0.1);
+                    gainNode.gain.value = Math.max(0, gainNode.gain.value - Math.max(10**parseInt(Math.log10(gainNode.gain.value+1)-2), 0.1));
                     actionText = `${messages[lang].volumeDown}${(gainNode.gain.value * 100).toFixed(0)}%`;
                 }
                 break;

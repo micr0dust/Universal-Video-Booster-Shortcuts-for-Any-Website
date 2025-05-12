@@ -2,7 +2,7 @@
 // @name                Universal Video Booster & Shortcuts
 // @name:zh-TW          影片聲音放大/降噪/左右鍵快轉
 // @namespace           https://github.com/micr0dust
-// @version             2025-03-22
+// @version             2025-05-12
 // @description         Provides sound amplification (up to 10,000%), noise reduction, and fast forward using left/right arrow keys. Ideal for watching school lecture videos.
 // @description:zh-tw   提供聲音放大(最大支持10000%)/降噪/左右鍵快轉，適合用來看學校教學影片。
 // @author              Microdust
@@ -18,8 +18,6 @@
     const lang = navigator.language.startsWith('zh') ? 'zh' : 'en';
     const messages = {
         en: {
-            play: "▶️",
-            pause: "⏸️",
             rewind: "⏪ Rewind 10s",
             forward: "⏩ Forward 10s",
             volumeUp: "🔊 Volume: ",
@@ -29,8 +27,6 @@
             filterOff: "🔈 Noise Filter OFF",
         },
         zh: {
-            play: "▶️",
-            pause: "⏸️",
             rewind: "⏪ 倒轉 10 秒",
             forward: "⏩ 快轉 10 秒",
             volumeUp: "🔊 音量：",
@@ -104,16 +100,6 @@
 
         let actionText = "";
         switch (event.code) {
-            case 'Space':
-                event.preventDefault();
-                if (video.paused) {
-                    video.play();
-                    actionText = messages[lang].play;
-                } else {
-                    video.pause();
-                    actionText = messages[lang].pause;
-                }
-                break;
             case 'ArrowLeft':
                 video.currentTime = Math.max(0, video.currentTime - 10);
                 actionText = messages[lang].rewind;

@@ -4,7 +4,6 @@ A Tampermonkey script that provides sound amplification (up to 10,000%), noise r
 
 ## Features
 
-- ⏸️ **Play/Pause:** Toggle playback with the spacebar.
 - ⏪ **Rewind:** Jump back 10 seconds with the left arrow.
 - ⏩ **Fast Forward:** Jump ahead 10 seconds with the right arrow.
 - 🔊 **Volume Booster:** Can amplify video sound up to 10000%.
